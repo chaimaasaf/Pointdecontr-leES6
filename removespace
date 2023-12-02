@@ -1,0 +1,16 @@
+function deletespace(NormalString) {
+  var newString = "";
+
+  for (var i = 0; i < NormalString.length; i++) {
+    if (NormalString[i] !== " ") {
+      newString += NormalString[i];
+    }
+  }
+
+  return newString;
+}
+
+// Example usage:
+var input = "Hello World my name is chaima issaoui ";
+var result = deletespace(input);
+console.log(result); // Output: HelloWorldmynameischaimaissaoui
