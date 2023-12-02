@@ -1,0 +1,30 @@
+/*Créer une fonction qui s'appelle remplacerLesLettres(). Elle prendra un argument de type string. 
+Elle devra retourner cette même string mais en remplacant les e par des 3, les i par des 1 et les o par des 0
+ Exemple :
+input : "Bonjour les amis" ==> Output : B0nj0ur l3s am1s
+input : "Les cours de programmation Web sont trops cools" ==> Output : L3s c0urs d3 pr0grammat10n W3b s0nt tr0ps c00ls*/
+
+function remplacerLesLettres(str) {
+  let result = "";
+  for (let i = 0; i < str.length; i++) {
+    // Effectuer les remplacements
+    if (str[i] === "e") {
+      result += "3";
+    } else if (str[i] === "i") {
+      result += "1";
+    } else if (str[i] === "o") {
+      result += "0";
+    } else {
+      result += str[i];
+    }
+  }
+
+  return result;
+}
+
+const exemple1 = "Bonjour les amis";
+const resultat1 = remplacerLesLettres(exemple1);
+console.log(resultat1); // Output: B0nj0ur l3s am1s
+
+const exemple2 = "Les cours de programmation Web sont trops cools";
+const resultat2 = remplacerLesLettres(exemple2);
